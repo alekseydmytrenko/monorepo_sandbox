@@ -1,10 +1,12 @@
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import {getAllGames} from "../fake-api";
 import {Card, CardActionArea, CardContent, CardMedia, Typography} from "@mui/material";
 import './app.module.scss';
+import { Header} from "@nx-workspace/store/ui-shared";
 
 export function App() {
   return (
+    <>
+    <Header/>
     <div className="container">
       <div className="games-layout">
       {getAllGames().map((x) => (
@@ -35,7 +37,7 @@ export function App() {
         </Card>
       ))}
       </div>
-    </div>
+    </div></>
   );
 }
 

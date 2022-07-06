@@ -1,12 +1,12 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-import styles from './app.module.scss';
-
-import { getAllGames } from "../fake-api";
-import { Card, CardActionArea, CardContent, CardMedia, Typography } from "@mui/material";
+import {getAllGames} from "../fake-api";
+import {Card, CardActionArea, CardContent, CardMedia, Typography} from "@mui/material";
+import './app.module.scss';
 
 export function App() {
   return (
-    <>
+    <div className="container">
+      <div className="games-layout">
       {getAllGames().map((x) => (
         <Card key={x.id} className="game-card">
           <CardActionArea>
@@ -34,7 +34,8 @@ export function App() {
           </CardActionArea>
         </Card>
       ))}
-    </>
+      </div>
+    </div>
   );
 }
 
